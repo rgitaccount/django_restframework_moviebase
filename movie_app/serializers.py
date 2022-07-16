@@ -35,6 +35,7 @@ class ReviewSerializer(serializers.ModelSerializer):
 
 class MovieDetailSerializer(serializers.ModelSerializer):
     reviews = ReviewSerializer(many=True)
+    director = DirectorSerializer()
 
     class Meta:
         model = Movie
